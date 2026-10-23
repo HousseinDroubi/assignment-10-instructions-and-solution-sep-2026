@@ -1,0 +1,21 @@
+- Create a variable called score (score is between 0 and 100), you can assign it a value of 75
+- Create a variable called has_submitted_assignments (has_submitted_assignments is either true or false), you can assign it a value of true
+- Create a variable called grade that is undefined by default.
+- Create a variable called status that is undefined by default.
+
+- if the score is between 0 and 100:
+    - if the score is greater than or equal 90 -> grade is "A"
+    - if the score is greater than or equal 80 -> grade is "B"
+    - if the score is greater than or equal 70 -> grade is "C"
+    - if the score is greater than or equal 60 -> grade is "D"
+    - Otherwise, the grade is F
+- Otherwise, status is "Wrong number"
+
+- if the score is greater than or equal 60:
+    - if the student has submitted all their assignments -> status is "Passed with all homework submitted."
+    - Otherwise, status is "Passed, but missing homework penalty applies."
+- Otherwise:
+    - if the score is greater than 50 -> status is "Failed, but eligible for a re-test."
+    - Otherwise, status is "Failed completely. Must retake the course."
+
+- Print the score, grade and status.
