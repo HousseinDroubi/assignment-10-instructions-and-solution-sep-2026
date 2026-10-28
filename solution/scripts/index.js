@@ -1,4 +1,4 @@
-const score = 50;
+const score = 71;
 const has_submitted_assignments = false;
 
 let grade;
@@ -13,13 +13,17 @@ if (score >= 0 && score <= 100) {
     grade = "C";
   } else if (score >= 60) {
     grade = "D";
+  } else {
+    grade = "F";
+  }
+
+  if (score >= 60) {
     if (has_submitted_assignments) {
       status = "Passed with all homework submitted.";
     } else {
       status = "Passed, but missing homework penalty applies.";
     }
   } else {
-    grade = "F";
     if (score >= 50) {
       status = "Failed, but eligible for a re-test.";
     } else {
