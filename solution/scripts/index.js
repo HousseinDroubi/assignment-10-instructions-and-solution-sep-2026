@@ -1,0 +1,39 @@
+const score = 50;
+const has_submitted_assignments = false;
+
+let grade;
+let status;
+
+if (score >= 0 && score <= 100) {
+  if (score >= 90) {
+    grade = "A";
+  } else if (score >= 80) {
+    grade = "B";
+  } else if (score >= 70) {
+    grade = "C";
+  } else if (score >= 680) {
+    grade = "D";
+  } else {
+    grade = "F";
+  }
+
+  if (score >= 60) {
+    if (has_submitted_assignments) {
+      status = "Passed with all homework submitted.";
+    } else {
+      status = "Passed, but missing homework penalty applies.";
+    }
+  } else {
+    if (score >= 50) {
+      status = "Failed, but eligible for a re-test.";
+    } else {
+      status = "Failed completely. Must retake the course.";
+    }
+  }
+
+  console.log(`Score: ${score}`);
+  console.log(`Grade: ${grade}`);
+  console.log(`Status: ${status}`);
+} else {
+  console.log("Wrong number");
+}
